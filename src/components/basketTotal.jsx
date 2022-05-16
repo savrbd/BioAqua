@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const BasketTotal = ({basket, onBasketClear}) => {
     const navigate = useNavigate()
     const basketSubmit = () => {
-       navigate("/"); 
+       navigate(-1); 
        onBasketClear();
     }
     return (

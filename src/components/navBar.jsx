@@ -6,28 +6,31 @@ import NavProfile from "./navProfile";
 const NavBar = () => {
   const { currentUser } = useAuth();
   return (
-    <nav className="navbar navbar-light" style={{ backgroundColor: "#e3f2fd" }}>
+    <nav className="navbar navbar-dark success" style={{ backgroundColor: "#98c11a" }}>
       <ul className="nav">
         <div className="d-flex flex-row align-items-center">
-          <Link className="nav-link active" aria-current="page" to="/">
+          <Link className="nav-link text-light" aria-current="page" to="/" style={{ Color: "red" }}>
             Главная
           </Link>
-          <Link className="nav-link active" aria-current="page" to="/initialize">
+          <Link className="nav-link text-light" aria-current="page" to="/products">
+            Каталог
+          </Link>
+          <Link className="nav-link text-light" aria-current="page" to="/initialize">
             Инициализация
           </Link>
 
         </div>
 
       </ul>
-      <h4 className="m-2">Online store </h4>
+      <h4 className=" m-2 text-light" ><img src="https://static.insales-cdn.com/assets/1/5148/996380/1638193246/logo.png" alt="" /> </h4>
       <div className="d-flex flex-row align-items-center">
-        <Link className="nav-link active" aria-current="page" to="/admin">
+        <Link className="nav-link text-light" aria-current="page" to="/admin">
           Админ.
         </Link>
         {currentUser ? (
           <NavProfile />
         ) : (
-          <Link className="nav-link" to="/login">
+          <Link className="nav-link text-light" to="/login">
             Вход/Регистрация
           </Link>
         )}

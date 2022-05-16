@@ -3,12 +3,11 @@ import React from "react";
 const GroupList = ({ category, onItemSelect, selectedItem, clearFilter}) => {
   if (category) {
     return (
-      <div className="d-flex flex-column flex-shrink-0 p-3">
-        <ul className="list-group">
+        <div className="d-flex justify-content-around">
           {Object.keys(category).map((item) => (
-            <li
+            <div
               className={
-                "list-group-item" +
+                "btn btn-outline-success btn-lg" +
                 (category[item] === selectedItem ? " active" : "")
               }
               key={category[item]._id}
@@ -16,11 +15,10 @@ const GroupList = ({ category, onItemSelect, selectedItem, clearFilter}) => {
               role="button"
             >
               {category[item].name}
-            </li>
+            </div>
           ))}
-        </ul>
-        <button className="btn btn-secondary mt-2" onClick={clearFilter}>Сброс</button>
-      </div>
+         <button className="btn btn-outline-success btn-lg" onClick={clearFilter}>Вся косметика</button> 
+        </div>
     );
   } else {
     return <h4>loading...</h4>;

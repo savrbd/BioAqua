@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import NavBar from "./components/navBar";
 import Login from "./layouts/login";
-import MainPage from "./layouts/mainPage";
 import Registration from "./layouts/registration";
 import AdminPage from "./layouts/adminPage";
 // import { CategoryProvider } from "./hooks/useCategory";
@@ -13,6 +12,9 @@ import { Route, Routes } from "react-router-dom";
 import Initialize from "./layouts/initialize";
 import { useDispatch } from "react-redux";
 import { loadCategoryList } from "./store/category";
+import ProductsPage from "./layouts/productsPage";
+import MainPage from "./layouts/mainPage";
+import Brend from "./layouts/brend";
 
 function App() {
   const dispatch = useDispatch();
@@ -26,13 +28,15 @@ function App() {
         {/* <CategoryProvider> */}
           <ProductsProvider>
             <Routes>
-              <Route path="/logout" element={<LogOut/>} />
-              <Route path="/login" element={<Login/>} />
-              <Route path="/registration" element={<Registration/>} />
-              <Route path="/admin" element={<AdminPage/>} />
-              <Route path="/initialize" element={<Initialize/>} />
-              <Route path="/user/:userId?" element={<UserPage/>}/>
-              <Route path="*" element={<MainPage/>} />
+              <Route path="logout" element={<LogOut/>} />
+              <Route path="login" element={<Login/>} />
+              <Route path="registration" element={<Registration/>} />
+              <Route path="admin" element={<AdminPage/>} />
+              <Route path="initialize" element={<Initialize/>} />
+              <Route path="brend" element={<Brend/>} />
+              <Route path="user/:userId?" element={<UserPage/>}/>
+              <Route path="products/*" element={<ProductsPage/>} />
+              <Route path="/" element={<MainPage/>} />
             </Routes>
           </ProductsProvider>
         {/* </CategoryProvider> */}

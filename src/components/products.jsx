@@ -19,7 +19,7 @@ const Products = ({
 }) => {
   return (
     <>
-      <div className="d-flex">
+      <div className="d-flex flex-column">
         <GroupList
           category={category}
           onItemSelect={handleItemSelect}

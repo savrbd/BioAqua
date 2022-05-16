@@ -12,7 +12,7 @@ const SearchForm = ({value, onChange, onSearchProduct}) => {
           value={value}
           onChange={onChange}
         />
-        <button className="btn btn-outline-primary m-3" onClick={onSearchProduct} >
+        <button className="btn btn-outline-success m-3" onClick={onSearchProduct} >
           Search
         </button>
       </div>
