@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import breandImage from '../../images/breandImage.jpg'
 
 const BreandMain = () => {
     const imageStyle = {
-        backgroundImage:`url("https://medaboutme.ru/upload/medialibrary/c6f/shutterstock_164368730.jpg")`,
+        backgroundImage:`url(${breandImage})`,
         backgroundSize: "100%",
         backgroundPosition: "center center"
     }

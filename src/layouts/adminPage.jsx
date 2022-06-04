@@ -2,8 +2,13 @@ import React, { useState, useEffect } from "react";
 import api from "../api";
 import AdminTable from "../components/adminPageComponent/adminTable";
 import AdminForm from "../components/adminPageComponent/adminForm";
+import { getCategory } from "../store/category";
+import { useSelector } from "react-redux";
+import { useProducts } from "../hooks/useProducts";
 
 const AdminPage = () => {
+  const category = useSelector(getCategory())
+  const { products } = useProducts();
   const cc = {
     _id: "",
     name: "",
@@ -12,24 +17,24 @@ const AdminPage = () => {
     countProduct: "",
     imageProduct: "",
   };
-  const [products, setProducts] = useState();
-  const [category, setCategory] = useState();
+  // const [products, setProducts] = useState();
+  // const [category, setCategory] = useState();
   const [data, setData] = useState(cc);
-  useEffect(() => {
-    api.products.fetchAll().then((data) => setProducts(data));
-  }, []);
-  useEffect(() => {
-    api.category.fetchAll().then((data) => setCategory(data));
-  }, []);
+  // useEffect(() => {
+  //   api.products.fetchAll().then((data) => setProducts(data));
+  // }, []);
+  // useEffect(() => {
+  //   api.category.fetchAll().then((data) => setCategory(data));
+  // }, []);
   const adminProductDelete = (productId) => {
     // удаление продукта админ
     const newProducts = products.filter((c) => c._id !== productId);
-    setProducts(newProducts);
+    // setProducts(newProducts);
   };
   const adminProductEdit = (productId) => {
     // изменение продукта админ
     const editProduct = products.find((c) => c._id === productId);
-    setData(editProduct);
+    // setData(editProduct);
   };
   const handleChange = ({ target }) => {
     setData((prevState) => ({
@@ -52,7 +57,7 @@ const AdminPage = () => {
         })
       ) {
         const newData = { ...data, category: category[data.category] };
-        setProducts([...products, newData]);
+        // setProducts([...products, newData]);
         setData(cc);
       } else {
         const productIndex = products.findIndex((item) => {
@@ -67,7 +72,7 @@ const AdminPage = () => {
         } else {
           newProduct[productIndex] = data;
         }
-        setProducts(newProduct);
+        // setProducts(newProduct);
         setData(cc);
       }
     }

@@ -26,7 +26,7 @@ function ProductsPage() {
   const [currentPage, setCurrentPage] = useState(1); // выбранная страница
   const [basket, setBasket] = useState([]); //продукты в корзине
   const [product, setProduct] = useState();
-  const pageSize = 10; // кол-во товара на странице
+  const pageSize = 16; // кол-во товара на странице
   const navigate = useNavigate();
   let foundProduct = ""; // найденные продукты
   useEffect(() => {
@@ -172,7 +172,7 @@ function ProductsPage() {
           <Route
             path=":productId"
             element={
-              <ProductPage putInTheBasket={putInTheBasket} product= {product}  />
+              <ProductPage putInTheBasket={putInTheBasket}  />
             }
           />
           <Route

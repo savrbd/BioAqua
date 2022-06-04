@@ -11,7 +11,6 @@ const TableBody = ({ products, onSort, iconsSort }) => {
       <SortCost onSort={onSort} iconsSort={iconsSort}/>
         <div className="d-flex  flex-wrap">
           {products.map((item) => (
-            <div className="card m-3" key={item._id}>
               <ProductCard
                 name={item.name}
                 cost={item.cost}
@@ -19,8 +18,8 @@ const TableBody = ({ products, onSort, iconsSort }) => {
                 countProduct={item.countProduct}
                 id={item._id}
                 description = {item.description}
+                key={item._id}
               />
-            </div>
           ))}
         </div>
       </div>

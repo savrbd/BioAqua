@@ -10,6 +10,9 @@ import "./slider.css";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
+import slide1 from '../../../images/slider/slide1.jpg';
+import slide2 from '../../../images/slider/slide2.jpg';
+import slide3 from '../../../images/slider/slide3.jpg'
 
 const SliderMain = () => {
     return (
@@ -28,9 +31,9 @@ const SliderMain = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide><img src='https://static.insales-cdn.com/assets/1/5148/996380/1638193246/slide1_image.jpg' alt="..."/></SwiperSlide>
-        <SwiperSlide><img src='https://static.insales-cdn.com/assets/1/5148/996380/1638193246/slide2_image.jpg' alt="..."/></SwiperSlide>
-        <SwiperSlide><img src='https://static.insales-cdn.com/assets/1/5148/996380/1638193246/slide3_image.jpg' alt="..."/></SwiperSlide>
+        <SwiperSlide><img src={slide1} alt="..."/></SwiperSlide>
+        <SwiperSlide><img src={slide2} alt="..."/></SwiperSlide>
+        <SwiperSlide><img src={slide3} alt="..."/></SwiperSlide>
       </Swiper>
     </>
         );

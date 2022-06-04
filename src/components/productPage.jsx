@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import api from "../api";
+import { useProducts } from "../hooks/useProducts";
 
 const ProductPage = ({ putInTheBasket }) => {
+  const { products } = useProducts();
   const { productId } = useParams();
-  const [product, setProduct] = useState();
-  useEffect(() => {
-    api.products.getById(productId).then((data) => setProduct(data));
-  });
-  if (product) {
+  console.log(products)
+  if (products) {
+    const product = products.filter((item)=>{return item._id===productId})[0]
+    console.log(product)
     return (
       <div className="container mt-5 shadow">
         <div className="row">
@@ -20,22 +21,19 @@ const ProductPage = ({ putInTheBasket }) => {
               style={{ maxHeight: "250px", maxWidth: "250px" }}
             />
           </div>
-          <div className="col-md-6 p-2 d-flex align-items-center  ">
+          <div className="col-md-8 p-4 d-flex align-items-center  ">
             <div>
-              <h2>{product.name}</h2>
-              <h4>{product.countProduct} шт.</h4>
-              <h4>{product.cost} руб</h4>
+              <h3 className="text-success">{product.name}</h3>
+              <p>{product.description}</p>
+              <h6>{product.countProduct} шт.</h6>
+              <p>id: {product._id} </p>
+              <h4 className="text-success">{product.cost} руб</h4>
             </div>
           </div>
-          <div className="col-md-2 p-2 d-flex  justify-content-center align-content-between">
-            <div className="d-flex align-items-center">
-              <button type="button" className="btn btn-primary" onClick={()=>{putInTheBasket(product)}}>
+          <div className="col-md-1 p-2 d-flex flex-column  justify-content-center align-items-center">
+              <button type="button" className="btn btn-outline-success" onClick={()=>{putInTheBasket(product)}}>
                 Купить
               </button>
-            </div>
-            <div className="d-flex align-items-end">
-              <h5>id: {product._id} </h5>
-            </div>
           </div>
         </div>
       </div>

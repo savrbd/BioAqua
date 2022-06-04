@@ -1,9 +1,9 @@
-export const category = {
-  phone: { _id: "67rdca3eeb7f6fgeed471818", name: "Смартфоны" },
-  laptop: { _id: "67rdca3eeb7f6fgeed471820", name: "Ноутбуки" },
-  tv: { _id: "67rdca3eeb7f6fgeed471814", name: "Телевизоры" },
-  fridge: { _id: "67rdca3eeb7f6fgeed471822", name: "Холодильники" },
-};
+export const category = [
+    { "_id": "67rdca3eeb7f6fgeed471818", "name": "Уход за кожей лица" },
+    { "_id": "67rdca3eeb7f6fgeed471819", "name": "Очищение/Маски" },
+    { "_id": "67rdca3eeb7f6fgeed471820", "name": "Уход за телом" },
+    { "_id": "67rdca3eeb7f6fgeed471821", "name": "Для волос" }
+  ];
 const fetchAll = () =>
   new Promise((resolve) => {
     window.setTimeout(function () {
