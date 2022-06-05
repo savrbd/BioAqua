@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import api from "../api";
 import SearchForm from "../components/searchForm";
 import BasketIcons from "../components/basketIcons";
 import _ from "lodash";

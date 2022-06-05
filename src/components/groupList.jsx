@@ -1,13 +1,15 @@
 import React from "react";
+import Loading from "./loading";
 
 const GroupList = ({ category, onItemSelect, selectedItem, clearFilter}) => {
   if (category) {
     return (
-        <div className="d-flex justify-content-around">
+      <div className="">
+        <ul className="list-group m-3">
           {Object.keys(category).map((item) => (
-            <div
+            <li
               className={
-                "btn btn-outline-success btn-lg" +
+                "btn btn-outline-success mt-2" +
                 (category[item] === selectedItem ? " active" : "")
               }
               key={category[item]._id}
@@ -15,13 +17,15 @@ const GroupList = ({ category, onItemSelect, selectedItem, clearFilter}) => {
               role="button"
             >
               {category[item].name}
-            </div>
+            </li>
           ))}
-         <button className="btn btn-outline-success btn-lg" onClick={clearFilter}>Вся косметика</button> 
-        </div>
+         <button className="btn btn-outline-success btn-lg mt-3" onClick={clearFilter}>Сброс</button> 
+        </ul>
+      </div>
+        
     );
   } else {
-    return <h4>loading...</h4>;
+    return <Loading/>;
   }
 };
 

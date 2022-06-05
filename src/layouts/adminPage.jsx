@@ -5,6 +5,7 @@ import AdminForm from "../components/adminPageComponent/adminForm";
 import { getCategory } from "../store/category";
 import { useSelector } from "react-redux";
 import { useProducts } from "../hooks/useProducts";
+import Loading from "../components/loading";
 
 const AdminPage = () => {
   const category = useSelector(getCategory())
@@ -77,7 +78,8 @@ const AdminPage = () => {
       }
     }
   };
-  return (
+  if (products && category){
+    return (
     <div className="d-flex m-2">
       <AdminForm
         category={category}
@@ -92,6 +94,10 @@ const AdminPage = () => {
       />
     </div>
   );
+  } else return (
+    <Loading/>
+  )
+  
 };
 
 export default AdminPage;
