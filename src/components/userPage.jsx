@@ -3,7 +3,7 @@ import UserCard from "./userCard";
 
 const UserPage = ( ) => {
         return (
-            <div className="container">
+            <div className="container m-5">
                 <div className="row gutters-sm">
                     <div className="col-md-8 mb-5">
                         <UserCard />

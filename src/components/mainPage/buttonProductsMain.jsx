@@ -7,7 +7,7 @@ const ButtonProductsMain = () => {
         <div className='m-10'>
             <div className="d-flex justify-content-center">
                 <Link className="nav-link" to="products">
-                <div  className="d-flex flex-column align-items-center justify-content-center p-5 text-white rounded" 
+                <div  className="d-flex flex-column align-items-center justify-content-center p-md-5 text-white rounded" 
                 style={{ backgroundImage:`url(${catalog})`, backgroundSize : '100%' }}>
                     <h1>ВСЕ ТОВАРЫ</h1>
                     <h5>В каталог</h5>

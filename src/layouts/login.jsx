@@ -84,7 +84,7 @@ const Login = () => {
                   <button
                       type="submit"
                       disabled={!isValid || enterError}
-                      className="btn btn-primary w-100 mx-auto"
+                      className="btn btn-success w-100 mx-auto"
                   >
                       Submit
                   </button>

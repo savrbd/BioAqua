@@ -14,7 +14,7 @@ const Initialize = () => {
                 <li>Progress: {progress}%</li>
                 {error && <li>error: {error}</li>}
             </ul>
-            <button className="btn btn-primary" onClick={handleClick}>
+            <button className="btn btn-success" onClick={handleClick}>
                 {" "}
                 Инициализировать
             </button>

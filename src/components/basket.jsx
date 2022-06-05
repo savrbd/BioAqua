@@ -18,7 +18,7 @@ const Basket = ({
   } else {
     return (
       <div className="container shadow">
-        <div className="d-flex bd-highlight">
+        <div className="d-md-flex bd-highlight">
           <div className="p-2 flex-grow-1 bd-highlight">
             <ul className="list-group">
               {basket.map((item) => (

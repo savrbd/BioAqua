@@ -34,7 +34,7 @@ function App() {
               <Route path="admin" element={<AdminPage/>} />
               <Route path="initialize" element={<Initialize/>} />
               <Route path="brend" element={<Brend/>} />
-              <Route path="user/:userId?" element={<UserPage/>}/>
+              <Route path=":userId" element={<UserPage/>}/>
               <Route path="products/*" element={<ProductsPage/>} />
               <Route path="/" element={<MainPage/>} />
             </Routes>

@@ -11,6 +11,8 @@ import { useProducts } from "../hooks/useProducts"
 import { Link, Route, Routes, useNavigate} from "react-router-dom";
 import { getCategory } from "../store/category";
 import { useSelector } from "react-redux";
+import Loading from "../components/loading";
+import Total from "../components/total";
 
 function ProductsPage() {
   // const { category } = useCategory();
@@ -168,6 +170,7 @@ function ProductsPage() {
               />
             }
           />
+          <Route path="total" element={<Total/>}/> 
           <Route
             path=":productId"
             element={
@@ -198,7 +201,9 @@ function ProductsPage() {
       </>
     );
   } else {
-    return <h5>Loading...</h5>;
+    return (
+      <Loading/>
+    );
   }
 }
 

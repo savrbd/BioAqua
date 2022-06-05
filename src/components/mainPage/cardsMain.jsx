@@ -6,9 +6,9 @@ const CardsMain = () => {
         <div className='mt-10 '>
             <div className='d-md-flex justify-content-around'>
                 {description.map((item)=>(
-                <div className='d-flex text-center  m-4 p-2 shadow flex-column' key={item.a1}>
-                    <h4 className='p-2 text-success'>{item.a1}</h4>
-                    <h5 className='p-2'>{item.a2}</h5>
+                <div className='d-flex text-center shadow flex-column m-md-4 p-2' key={item.a1}>
+                    <h4 className='p-md-2 text-success'>{item.a1}</h4>
+                    <h5 className='p-md-2'>{item.a2}</h5>
             </div>)
             )}
             </div>
