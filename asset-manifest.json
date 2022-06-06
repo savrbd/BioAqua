@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/BioAqua/static/css/main.f6abef2b.css",
+    "main.js": "/BioAqua/static/js/main.8a3e3852.js",
+    "static/js/787.ec3cd862.chunk.js": "/BioAqua/static/js/787.ec3cd862.chunk.js",
+    "static/media/slide3.jpg": "/BioAqua/static/media/slide3.9cccf519e6d34471b24f.jpg",
+    "static/media/slide1.jpg": "/BioAqua/static/media/slide1.32ca8e42eb8226746aa9.jpg",
+    "static/media/slide2.jpg": "/BioAqua/static/media/slide2.45d5b3b9065992027e58.jpg",
+    "static/media/catalog.jpg": "/BioAqua/static/media/catalog.6c3a0e49907a5ad7bf4f.jpg",
+    "static/media/breandImage.jpg": "/BioAqua/static/media/breandImage.d312d7305e930c276d62.jpg",
+    "index.html": "/BioAqua/index.html",
+    "main.f6abef2b.css.map": "/BioAqua/static/css/main.f6abef2b.css.map",
+    "main.8a3e3852.js.map": "/BioAqua/static/js/main.8a3e3852.js.map",
+    "787.ec3cd862.chunk.js.map": "/BioAqua/static/js/787.ec3cd862.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6abef2b.css",
+    "static/js/main.8a3e3852.js"
+  ]
+}
