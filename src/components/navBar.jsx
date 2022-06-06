@@ -27,6 +27,9 @@ const NavBar = () => {
             <Link className="nav-link text-light" aria-current="page" to="/products">
               Каталог
             </Link>
+            <Link className="nav-link text-light" to="brend">
+              Бренд
+            </Link>
             {userId==="bPUy4xwlSeR76bV9msS5u2brV522"? <Link className="nav-link text-light" aria-current="page" to="/initialize">
               Инициализация
             </Link>:null}

@@ -22,7 +22,7 @@ function App() {
         dispatch(loadCategoryList());
     }, []);
   return (
-    <>
+    <div style={{backgroundColor: "#f6f6f6"}}>
       <AuthProvider>
         <NavBar />
         {/* <CategoryProvider> */}
@@ -42,7 +42,7 @@ function App() {
         {/* </CategoryProvider> */}
       </AuthProvider>
       
-    </>
+    </div>
   );
 }
 
