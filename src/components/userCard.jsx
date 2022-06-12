@@ -11,6 +11,7 @@ const UserCard = () => {
                     <div className="mt-3">
                         <h4>Имя:  {currentUser.name}</h4>
                         <h4> Email:  {currentUser.email}</h4>
+                        <h4> Телефон:  {currentUser.phone}</h4>
                     </div>
                 </div>
             </div>

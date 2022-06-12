@@ -13,6 +13,7 @@ import { getCategory } from "../store/category";
 import { useSelector } from "react-redux";
 import Loading from "../components/loading";
 import Total from "../components/total";
+import TotalError from "../components/totalError";
 
 function ProductsPage() {
   // const { category } = useCategory();
@@ -171,6 +172,7 @@ function ProductsPage() {
             }
           />
           <Route path="total" element={<Total/>}/> 
+          <Route path="totalError" element={<TotalError/>}/> 
           <Route
             path=":productId"
             element={

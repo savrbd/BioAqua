@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../hooks/useAuth';
 // import Total from './total';
 
 const BasketTotal = ({basket, onBasketClear}) => {
     const navigate = useNavigate()
+    const { currentUser } = useAuth();
    
    
     const basketSubmit = () => {
     //    navigate(-1);
-    navigate("../total", { replace: true }); 
+    navigate(currentUser?"../total" : "../totalError", { replace: true }); 
        onBasketClear();
     }
     return (

@@ -11,7 +11,8 @@ import { useNavigate } from "react-router-dom";
 export const httpAuth = axios.create({
     baseURL: "https://identitytoolkit.googleapis.com/v1/",
     params: {
-        key: process.env.REACT_APP_FIREBASE_KEY
+        key: "AIzaSyAkcHNa_T84oPp-S5_IaE8S_ciSggjZl94"
+        // key: process.env.REACT_APP_FIREBASE_KEY
     }
 });
 const AuthContext = React.createContext();

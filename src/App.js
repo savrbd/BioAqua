@@ -37,6 +37,7 @@ function App() {
               <Route path=":userId" element={<UserPage/>}/>
               <Route path="products/*" element={<ProductsPage/>} />
               <Route path="/" element={<MainPage/>} />
+              <Route path="*" element={<MainPage/>} />
             </Routes>
           </ProductsProvider>
         {/* </CategoryProvider> */}

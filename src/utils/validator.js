@@ -21,10 +21,19 @@ export function validator(data, config) {
             statusValidate = !digitRegExp.test(data);
             break;
         }
+        case "isDigit": {
+            const digitRegExp = /[0-9]/g;
+            statusValidate = !digitRegExp.test(data);
+            break;
+        }
         case "min": {
             statusValidate = data.length < config.value;
             break;
         }
+        // case "length": {
+        //     statusValidate = data.length = config.value;
+        //     break;
+        // }
         default:
             break;
         }

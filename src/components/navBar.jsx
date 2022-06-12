@@ -10,8 +10,8 @@ const NavBar = () => {
   console.log(userId)
   const { currentUser } = useAuth();
   return (
-    <nav class="navbar navbar-expand-md navbar-dark success" style={{ backgroundColor: "#98c11a" }}>
-      <Link className="m-2 position-absolute end-50 top-0 " aria-current="page" to="/">    
+    <nav class="navbar navbar-expand-md navbar-dark success p-3" style={{ backgroundColor: "#98c11a" }}>
+      <Link className="m-3 position-absolute end-50 top-0 " aria-current="page" to="/">    
         <img className="" src="https://static.insales-cdn.com/assets/1/5148/996380/1638193246/logo.png" alt="" />
       </Link>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,14 +30,14 @@ const NavBar = () => {
             <Link className="nav-link text-light" to="brend">
               Бренд
             </Link>
-            {userId==="bPUy4xwlSeR76bV9msS5u2brV522"? <Link className="nav-link text-light" aria-current="page" to="/initialize">
+            {userId==="sqI86df06HTH3LY18OXT6kB1VCW2"? <Link className="nav-link text-light" aria-current="page" to="/initialize">
               Инициализация
             </Link>:null}
           </div>
         </ul>
         <ul className="nav">
             <div className="d-md-flex flex-row align-items-center">
-            {userId==="bPUy4xwlSeR76bV9msS5u2brV522" ?
+            {userId==="sqI86df06HTH3LY18OXT6kB1VCW2" ?
             <Link className="nav-link text-light" aria-current="page" to="/admin">
               Админ.
             </Link>:null}
@@ -56,6 +56,7 @@ const NavBar = () => {
       </div>
          
     </nav>
+    
   );
 };
 

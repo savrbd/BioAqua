@@ -10,6 +10,7 @@ const Registration = () => {
         email: "",
         password: "",
         name: "",
+        phone: ""
     });
     const { signUp } = useAuth();
     const [errors, setErrors] = useState({});
@@ -51,6 +52,18 @@ const Registration = () => {
             min: {
                 message: "Пароль должен состаять миниму из 8 символов",
                 value: 8
+            }
+        },
+        phone: {
+            isRequired: {
+                message: "Телефон обязателен для заполнения"
+            },
+            isDigit: {
+                message: "Телефон должен состоять только из цифр "
+            },
+            length: {
+                message: "Пароль должен состоять  из 11 цифр",
+                value: 11
             }
         }
     };
@@ -95,6 +108,14 @@ const Registration = () => {
                     value={data.email}
                     onChange={handleChange}
                     error={errors.email}
+                />
+                <TextField
+                    label="Номер телефона"
+                    name="phone"
+                    value={data.phone}
+                    onChange={handleChange}
+                    error={errors.phone}
+                    type="number"
                 />
                 <TextField
                     label="Пароль"

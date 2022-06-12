@@ -31,7 +31,7 @@ const ProductPage = ({ putInTheBasket }) => {
               </div> 
               <div className="col-md-1 p-2 d-flex flex-column  justify-content-center align-items-center">
                 <button type="button" className="btn btn-outline-success" onClick={()=>{putInTheBasket(product)}}>
-                  Купить
+                  В_корзину
                 </button>
               </div>
             </div> 
