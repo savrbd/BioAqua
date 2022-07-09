@@ -7,55 +7,55 @@ import NavProfile from "./navProfile";
 
 const NavBar = () => {
   const userId = getUserId()
-  console.log(userId)
   const { currentUser } = useAuth();
   return (
-    <nav class="navbar navbar-expand-md navbar-dark success p-3" style={{ backgroundColor: "#98c11a" }}>
-      <Link className="m-3 position-absolute end-50 top-0 " aria-current="page" to="/">    
-        <img className="" src="https://static.insales-cdn.com/assets/1/5148/996380/1638193246/logo.png" alt="" />
-      </Link>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <div class="collapse navbar-collapse justify-content-between" id="navContent">
-        <ul className="nav">
-          <div className="d-md-flex flex-row align-items-center">
-            <Link className="nav-link text-light" aria-current="page" to="/" style={{ Color: "red" }}>
-              Главная
-            </Link>
-            <Link className="nav-link text-light" aria-current="page" to="/products">
-              Каталог
-            </Link>
-            <Link className="nav-link text-light" to="brend">
-              Бренд
-            </Link>
-            {userId==="sqI86df06HTH3LY18OXT6kB1VCW2"? <Link className="nav-link text-light" aria-current="page" to="/initialize">
-              Инициализация
-            </Link>:null}
-          </div>
-        </ul>
-        <ul className="nav">
-            <div className="d-md-flex flex-row align-items-center">
-            {userId==="sqI86df06HTH3LY18OXT6kB1VCW2" ?
-            <Link className="nav-link text-light" aria-current="page" to="/admin">
-              Админ.
-            </Link>:null}
-            
-            </div>
-        </ul>
-      </div>
-      <div className="me-3">
-        {currentUser ? (
-          <NavProfile />
-          ) : (
-          <Link className="nav-link text-light" to="/login">
-            Вход
+    <>
+      <div className="d-flex justify-content-center" style={{ backgroundColor: "#004357" }}>
+          <Link className="" aria-current="page" to="/">    
+            <img className="" src="https://static.insales-cdn.com/assets/1/5148/996380/1638193246/logo.png" alt="" />
           </Link>
-        )}
+          <div className="position-absolute end-0 me-3 mt-1">
+          {currentUser ? (
+            <NavProfile />
+            ) : (
+            <Link className="nav-link text-light display-6" to="/login">
+              Вход
+            </Link>
+          )}
+        </div>
       </div>
-         
-    </nav>
+      <nav className="navbar navbar-expand-md navbar-dark success" style={{ backgroundColor: "#98c11a" }}>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        
+        <div className="collapse navbar-collapse justify-content-between" id="navContent">
+          <ul className="nav">
+            <div className="d-md-flex flex-row align-items-center">
+              <Link className="nav-link text-light" aria-current="page" to="/" >
+                Главная
+              </Link>
+              <Link className="nav-link text-light" aria-current="page" to="/products">
+                Каталог
+              </Link>
+              <Link className="nav-link text-light" to="brend">
+                Бренд
+              </Link>
+              {userId==="sqI86df06HTH3LY18OXT6kB1VCW2"? <Link className="nav-link text-light" aria-current="page" to="/initialize">
+                Инициализация
+              </Link>:null}
+              {userId==="sqI86df06HTH3LY18OXT6kB1VCW2" ?
+              <Link className="nav-link text-light" aria-current="page" to="/admin">
+                Админ.
+              </Link>:null}
+            </div>
+          </ul>
+        </div>
+        
+          
+      </nav>
+    </>
+    
     
   );
 };

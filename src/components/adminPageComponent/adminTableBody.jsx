@@ -7,7 +7,7 @@ const AdminTableBody = ({ products, adminProductDelete, adminProductEdit }) => {
         <tr key={item._id}>
           <th>{item._id}</th>
           <th>{item.name}</th>
-          <th>{item.category.name}</th>
+          {/* <th>{item.category.name}</th> */}
           <th>{item.cost} руб.</th>
           <th>{item.countProduct}</th>
           <th>

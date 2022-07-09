@@ -10,14 +10,14 @@ const NavProfile = () => {
     return (
         <div className="dropdown" onClick={toggleMenu}>
             <div className="btn dropdown-toggle d-flex align-items-center text-light">
-                <div className="me-2">{currentUser.name}</div>
+                <div className="me">{currentUser.name}</div>
                 {/* <img
                     src={currentUser.image}
                     alt=""
                     height="40"
                     className="img-responsive rounded-circle"
                 /> */}
-                <i class="bi bi-person-circle"></i>
+                <i className="bi bi-person-circle"></i>
             </div>
             <div className={"w-100 dropdown-menu" + (isOpen ? " show" : "")}>
                 <Link

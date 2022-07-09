@@ -41,7 +41,8 @@ export const ProductsProvider = ({ children }) => {
     async function removeProduct(id) {
         try {
             const { content } = await productsService.removeProducts(id);
-            if (content === "ok") {
+            console.log(content);
+            if (content === null) {
                 setProducts((prevState) =>
                     prevState.filter((c) => c._id !== id)
                 );

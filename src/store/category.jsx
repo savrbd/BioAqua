@@ -33,7 +33,6 @@ const { categoryRequested, categoryReceved, categoryRequestFiled } =
 export const loadCategoryList = () => async (dispatch, getState) => {
     const { lastFetch } = getState().category;
     if (isOutdated(lastFetch)) {
-        console.log("lastFetch", lastFetch);
         dispatch(categoryRequested());
         try {
             const { content } = await categoryService.get();

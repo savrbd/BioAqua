@@ -9,7 +9,7 @@ import Loading from "../components/loading";
 
 const AdminPage = () => {
   const category = useSelector(getCategory())
-  const { products } = useProducts();
+  const { products, removeProduct } = useProducts();
   const cc = {
     _id: "",
     name: "",
@@ -29,13 +29,16 @@ const AdminPage = () => {
   // }, []);
   const adminProductDelete = (productId) => {
     // удаление продукта админ
-    const newProducts = products.filter((c) => c._id !== productId);
+    // const newProducts = products.filter((c) => c._id !== productId);
+    removeProduct(productId)
+    
     // setProducts(newProducts);
   };
   const adminProductEdit = (productId) => {
     // изменение продукта админ
-    const editProduct = products.find((c) => c._id === productId);
+    // const editProduct = products.find((c) => c._id === productId);
     // setData(editProduct);
+    console.log(productId)
   };
   const handleChange = ({ target }) => {
     setData((prevState) => ({

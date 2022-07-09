@@ -6,10 +6,11 @@ import { useAuth } from '../hooks/useAuth';
 const BasketTotal = ({basket, onBasketClear}) => {
     const navigate = useNavigate()
     const { currentUser } = useAuth();
-   
+   console.log(basket);
    
     const basketSubmit = () => {
     //    navigate(-1);
+   
     navigate(currentUser?"../total" : "../totalError", { replace: true }); 
        onBasketClear();
     }
