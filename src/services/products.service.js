@@ -6,18 +6,22 @@ const productService = {
         const { data } = await httpService.get(productsEndpoint);
         return data;
     },
-    createComment: async (payload) => {
+    createProducts: async (payload) => {
         const { data } = await httpService.put(
             productsEndpoint + payload._id,
             payload
         );
-        
+        console.log("data", data)
         return data;
     },
     
     removeProducts: async (productId) => {
-        console.log("hi")
         const { data } = await httpService.delete(productsEndpoint + productId);
+        return data;
+    },
+    updateProducts: async (productId) => {
+        console.log("hi")
+        const { data } = await httpService.patch(productsEndpoint + productId);
         console.log("data", data)
         return data;
     }

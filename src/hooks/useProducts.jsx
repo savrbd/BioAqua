@@ -41,7 +41,6 @@ export const ProductsProvider = ({ children }) => {
     async function removeProduct(id) {
         try {
             const { content } = await productsService.removeProducts(id);
-            console.log(content);
             if (content === null) {
                 setProducts((prevState) =>
                     prevState.filter((c) => c._id !== id)
@@ -56,6 +55,7 @@ export const ProductsProvider = ({ children }) => {
         try {
             const { content } = await productsService.createProducts(data);
             setProducts((prevState) => [...prevState, content]);
+            console.log("content",content)
         } catch (error) {
             errorCatcher(error);
         }

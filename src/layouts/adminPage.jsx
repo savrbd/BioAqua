@@ -9,7 +9,7 @@ import Loading from "../components/loading";
 
 const AdminPage = () => {
   const category = useSelector(getCategory())
-  const { products, removeProduct } = useProducts();
+  const { products, removeProduct, updateProduct, createProduct } = useProducts();
   const cc = {
     _id: "",
     name: "",
@@ -17,28 +17,19 @@ const AdminPage = () => {
     cost: "",
     countProduct: "",
     imageProduct: "",
+    description: ""
   };
   // const [products, setProducts] = useState();
   // const [category, setCategory] = useState();
   const [data, setData] = useState(cc);
-  // useEffect(() => {
-  //   api.products.fetchAll().then((data) => setProducts(data));
-  // }, []);
-  // useEffect(() => {
-  //   api.category.fetchAll().then((data) => setCategory(data));
-  // }, []);
   const adminProductDelete = (productId) => {
     // удаление продукта админ
-    // const newProducts = products.filter((c) => c._id !== productId);
     removeProduct(productId)
-    
-    // setProducts(newProducts);
   };
   const adminProductEdit = (productId) => {
     // изменение продукта админ
-    // const editProduct = products.find((c) => c._id === productId);
-    // setData(editProduct);
     console.log(productId)
+
   };
   const handleChange = ({ target }) => {
     setData((prevState) => ({
@@ -46,6 +37,12 @@ const AdminPage = () => {
       [target.name]: target.value,
     }));
   };
+  const handleChange2 = (target) => {
+    setData((prevState) => ({
+        ...prevState,
+        [target.name]: target.value
+    }));
+};
   const addNewProduct = () => {
     // добавление нового продукта с администратора
     if (
@@ -53,7 +50,7 @@ const AdminPage = () => {
       data.category &&
       data.name &&
       data.cost &&
-      data.countProduct
+      data.countProduct && data.imageProduct && data.description
     ) {
       if (
         !products.some((c) => {
@@ -62,6 +59,8 @@ const AdminPage = () => {
       ) {
         const newData = { ...data, category: category[data.category] };
         // setProducts([...products, newData]);
+        console.log("newDate", newData)
+        createProduct(newData)
         setData(cc);
       } else {
         const productIndex = products.findIndex((item) => {
@@ -87,6 +86,7 @@ const AdminPage = () => {
       <AdminForm
         category={category}
         onChange={handleChange}
+        onChange2={handleChange2}
         data={data}
         addNewProduct={addNewProduct}
       />
