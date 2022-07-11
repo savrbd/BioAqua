@@ -15,7 +15,7 @@ const MainPage = () => {
                     <ButtonProductsMain/>
                     <CardsMain/>
                     <BreandMain/>
-                    <ContactMain/>
+                    <ContactMain id="a1"/>
             </div>
             <FooterMain/>
             

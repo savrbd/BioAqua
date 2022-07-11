@@ -41,6 +41,8 @@ const NavBar = () => {
               <Link className="nav-link text-light" to="brend">
                 Бренд
               </Link>
+              {/* <a className="nav-link text-light" href="Footermain">Контакты</a> */}
+
               {userId==="sqI86df06HTH3LY18OXT6kB1VCW2"? <Link className="nav-link text-light" aria-current="page" to="/initialize">
                 Инициализация
               </Link>:null}
