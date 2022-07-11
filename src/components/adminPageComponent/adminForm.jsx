@@ -32,12 +32,14 @@ const AdminForm = ({ category, onChange,onChange2, data, addNewProduct }) => {
           value={data.category}
         />
         <TextField
+          type="number"
           label="Стоимость"
           name="cost"
           value={data.cost}
           onChange={onChange}
         />
         <TextField
+          type="number"
           label="Количество"
           name="countProduct"
           value={data.countProduct}

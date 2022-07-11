@@ -7,17 +7,6 @@ const AdminTableBody = ({ products, adminProductDelete, adminProductEdit }) => {
         <tr key={item._id}>
           <th>{item._id}</th>
           <th>{item.name}</th>
-          {/* <th>{item.category.name}</th> */}
-          <th>{item.cost} руб.</th>
-          <th>{item.countProduct}</th>
-          <th>
-            <img
-              src={item.imageProduct}
-              className="img-fluid rounded-start "
-              alt="..."
-              style={{ maxHeight: "50px", maxWidth: "50px" }}
-            />
-          </th>
           <th>
             <button
               type="button"
@@ -37,6 +26,17 @@ const AdminTableBody = ({ products, adminProductDelete, adminProductEdit }) => {
             >
               <i className="bi bi-x-circle"></i>
             </button>
+          </th>
+          {/* <th>{item.category.name}</th> */}
+          <th>{item.cost} руб.</th>
+          <th>{item.countProduct}</th>
+          <th>
+            <img
+              src={item.imageProduct}
+              className="img-fluid rounded-start "
+              alt="..."
+              style={{ maxHeight: "50px", maxWidth: "50px" }}
+            />
           </th>
         </tr>
       ))}

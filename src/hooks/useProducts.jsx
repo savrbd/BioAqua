@@ -63,12 +63,16 @@ export const ProductsProvider = ({ children }) => {
     async function updateProduct(data) {
         try {
             const { content } = await productsService.updateProducts(data);
-            const newProducts = products;
+            if (content){
+              const newProducts = [...products];
             console.log(content);
-            const elementIndex = products.findIndex((el)=> el._id = content._id);
+            const elementIndex = products.findIndex((el)=> el._id == data._id);
             console.log(elementIndex);
-            newProducts[elementIndex] = content;
-            setProducts(newProducts);
+            newProducts[elementIndex] = {...data};
+            console.log(newProducts); 
+            setProducts(newProducts)
+            }
+            
         } catch (error) {
             errorCatcher(error);
         }

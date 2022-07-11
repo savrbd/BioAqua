@@ -29,6 +29,7 @@ const AdminPage = () => {
   const adminProductEdit = (productId) => {
     // изменение продукта админ
     console.log(productId)
+    setData(products.find((item)=>{ return item._id===productId}))
 
   };
   const handleChange = ({ target }) => {
@@ -63,19 +64,7 @@ const AdminPage = () => {
         createProduct(newData)
         setData(cc);
       } else {
-        const productIndex = products.findIndex((item) => {
-          return item._id === data._id;
-        });
-        const newProduct = products;
-        if (typeof data.category == "string") {
-          newProduct[productIndex] = {
-            ...data,
-            category: category[data.category],
-          };
-        } else {
-          newProduct[productIndex] = data;
-        }
-        // setProducts(newProduct);
+        updateProduct(data)
         setData(cc);
       }
     }

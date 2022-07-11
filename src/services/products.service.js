@@ -19,12 +19,19 @@ const productService = {
         const { data } = await httpService.delete(productsEndpoint + productId);
         return data;
     },
-    updateProducts: async (productId) => {
-        console.log("hi")
-        const { data } = await httpService.patch(productsEndpoint + productId);
+    // updateProducts: async (productId) => {
+    //     const { data } = await httpService.patch(productsEndpoint + productId);
+    //     console.log("data", data)
+    //     return data;
+    // },
+    updateProducts: async (payload) => {
+        const { data } = await httpService.patch(
+            productsEndpoint + payload._id,
+            payload
+        );
         console.log("data", data)
         return data;
-    }
+    },
 };
 export default productService;
 
