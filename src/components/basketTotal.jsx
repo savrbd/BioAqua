@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
-import { useUser } from '../hooks/useUsers';
+// import { useUser } from '../hooks/useUsers';
 import emailjs from '@emailjs/browser';
 
 const BasketTotal = ({basket, onBasketClear}) => {
@@ -11,7 +11,8 @@ const BasketTotal = ({basket, onBasketClear}) => {
 
     const basketSubmit = () => {
     //    navigate(-1);
-    const templateParams = {
+    if (currentUser){
+        const templateParams = {
             name: currentUser.name,
             email: currentUser.email,
             phone: currentUser.phone,
@@ -23,9 +24,11 @@ const BasketTotal = ({basket, onBasketClear}) => {
         }, function(error) {
            console.log('FAILED...', error);
         });
-   
-    navigate(currentUser?"../total" : "../totalError", { replace: true }); 
-       onBasketClear();
+    navigate("../total", { replace: true }); 
+    onBasketClear(); 
+    } else {
+        navigate("../totalError", { replace: true });   
+    }
     }
     return (
         <>
