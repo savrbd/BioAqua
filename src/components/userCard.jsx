@@ -7,11 +7,15 @@ const UserCard = () => {
         <div className="card mb-5">
             <div className="card-body">
                 <div className="d-flex flex-column align-items-center text-center position-relative">
-                    <img src={currentUser.image} className="rounded-circle" width="200"/>
+                    <img
+                        src={currentUser.image}
+                        className="rounded-circle"
+                        width="200"
+                    />
                     <div className="mt-3">
-                        <h4>Имя:  {currentUser.name}</h4>
-                        <h4> Email:  {currentUser.email}</h4>
-                        <h4> Телефон:  {currentUser.phone}</h4>
+                        <h4>Имя: {currentUser.name}</h4>
+                        <h4> Email: {currentUser.email}</h4>
+                        <h4> Телефон: {currentUser.phone}</h4>
                     </div>
                 </div>
             </div>

@@ -1,12 +1,14 @@
 [
-  { "_id": "67rdca3eeb7f6fgeed471820", "name": "Для мужчин" },
-  { "_id": "67rdca3eeb7f6fgeed471821", "name": "Пенки для умывания лица" },
-  { "_id": "67rdca3eeb7f6fgeed471822", "name": "Средства от акне" },
-  { "_id": "67rdca3eeb7f6fgeed471823", "name": "Сыворотки, эссенции для лица и шеи" },
-  { "_id": "67rdca3eeb7f6fgeed471824", "name": "Тонеры" },
-  { "_id": "67rdca3eeb7f6fgeed471825", "name": "Декоративная косметика" },
-  { "_id": "67rdca3eeb7f6fgeed471826", "name": "Патчи" },
-  { "_id": "67rdca3eeb7f6fgeed471827", "name": "Крема для лица и шеи" },
-  { "_id": "67rdca3eeb7f6fgeed471828", "name": "Уход за лицом и телом" }
-
+    { "_id": "67rdca3eeb7f6fgeed471820", "name": "Для мужчин" },
+    { "_id": "67rdca3eeb7f6fgeed471821", "name": "Пенки для умывания лица" },
+    { "_id": "67rdca3eeb7f6fgeed471822", "name": "Средства от акне" },
+    {
+        "_id": "67rdca3eeb7f6fgeed471823",
+        "name": "Сыворотки, эссенции для лица и шеи"
+    },
+    { "_id": "67rdca3eeb7f6fgeed471824", "name": "Тонеры" },
+    { "_id": "67rdca3eeb7f6fgeed471825", "name": "Декоративная косметика" },
+    { "_id": "67rdca3eeb7f6fgeed471826", "name": "Патчи" },
+    { "_id": "67rdca3eeb7f6fgeed471827", "name": "Крема для лица и шеи" },
+    { "_id": "67rdca3eeb7f6fgeed471828", "name": "Уход за лицом и телом" }
 ]

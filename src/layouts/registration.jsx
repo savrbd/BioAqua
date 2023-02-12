@@ -90,52 +90,52 @@ const Registration = () => {
     };
 
     return (
-      <div className="container mt-5">
-        <div className="row">
-          <div className="col-md-6 offset-md-3 shadow p-4">
-            <h3 className="mb-4">Регистрация</h3>
-            <form onSubmit={handleSubmit}>
-                <TextField
-                    label="Имя"
-                    name="name"
-                    value={data.name}
-                    onChange={handleChange}
-                    error={errors.name}
-                />
-                <TextField
-                    label="Электронная почта"
-                    name="email"
-                    value={data.email}
-                    onChange={handleChange}
-                    error={errors.email}
-                />
-                <TextField
-                    label="Номер телефона"
-                    name="phone"
-                    value={data.phone}
-                    onChange={handleChange}
-                    error={errors.phone}
-                    type="number"
-                />
-                <TextField
-                    label="Пароль"
-                    type="password"
-                    name="password"
-                    value={data.password}
-                    onChange={handleChange}
-                    error={errors.password}
-                />
-                <button
-                    type="submit"
-                    disabled={!isValid}
-                    className="btn btn-success w-100 mx-auto"
-                >
-                    Submit
-                </button>
-            </form>
-          </div>
+        <div className="container mt-5">
+            <div className="row">
+                <div className="col-md-6 offset-md-3 shadow p-4">
+                    <h3 className="mb-4">Регистрация</h3>
+                    <form onSubmit={handleSubmit}>
+                        <TextField
+                            label="Имя"
+                            name="name"
+                            value={data.name}
+                            onChange={handleChange}
+                            error={errors.name}
+                        />
+                        <TextField
+                            label="Электронная почта"
+                            name="email"
+                            value={data.email}
+                            onChange={handleChange}
+                            error={errors.email}
+                        />
+                        <TextField
+                            label="Номер телефона"
+                            name="phone"
+                            value={data.phone}
+                            onChange={handleChange}
+                            error={errors.phone}
+                            type="number"
+                        />
+                        <TextField
+                            label="Пароль"
+                            type="password"
+                            name="password"
+                            value={data.password}
+                            onChange={handleChange}
+                            error={errors.password}
+                        />
+                        <button
+                            type="submit"
+                            disabled={!isValid}
+                            className="btn btn-success w-100 mx-auto"
+                        >
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
     );
 };
 

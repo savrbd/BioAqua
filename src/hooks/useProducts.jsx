@@ -55,7 +55,7 @@ export const ProductsProvider = ({ children }) => {
         try {
             const { content } = await productsService.createProducts(data);
             setProducts((prevState) => [...prevState, content]);
-            console.log("content",content)
+            console.log("content", content);
         } catch (error) {
             errorCatcher(error);
         }
@@ -63,16 +63,17 @@ export const ProductsProvider = ({ children }) => {
     async function updateProduct(data) {
         try {
             const { content } = await productsService.updateProducts(data);
-            if (content){
-              const newProducts = [...products];
-            console.log(content);
-            const elementIndex = products.findIndex((el)=> el._id == data._id);
-            console.log(elementIndex);
-            newProducts[elementIndex] = {...data};
-            console.log(newProducts); 
-            setProducts(newProducts)
+            if (content) {
+                const newProducts = [...products];
+                console.log(content);
+                const elementIndex = products.findIndex(
+                    (el) => el._id == data._id
+                );
+                console.log(elementIndex);
+                newProducts[elementIndex] = { ...data };
+                console.log(newProducts);
+                setProducts(newProducts);
             }
-            
         } catch (error) {
             errorCatcher(error);
         }
@@ -80,7 +81,13 @@ export const ProductsProvider = ({ children }) => {
 
     return (
         <ProductsContext.Provider
-            value={{ isLoading, products, removeProduct, createProduct, updateProduct }}
+            value={{
+                isLoading,
+                products,
+                removeProduct,
+                createProduct,
+                updateProduct
+            }}
         >
             {children}
         </ProductsContext.Provider>

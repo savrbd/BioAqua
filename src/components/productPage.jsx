@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
-import api from "../api";
 import { useProducts } from "../hooks/useProducts";
 import Loading from "./loading";
 

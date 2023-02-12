@@ -11,10 +11,10 @@ const productService = {
             productsEndpoint + payload._id,
             payload
         );
-        console.log("data", data)
+        console.log("data", data);
         return data;
     },
-    
+
     removeProducts: async (productId) => {
         const { data } = await httpService.delete(productsEndpoint + productId);
         return data;
@@ -29,9 +29,8 @@ const productService = {
             productsEndpoint + payload._id,
             payload
         );
-        console.log("data", data)
+        console.log("data", data);
         return data;
-    },
+    }
 };
 export default productService;
-

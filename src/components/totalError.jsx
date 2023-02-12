@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const TotalError = () => {
     return (
@@ -6,6 +6,6 @@ const TotalError = () => {
             <h2>Перед отправкой формы необходимо авторизоваться</h2>
         </div>
     );
-}
- 
+};
+
 export default TotalError;

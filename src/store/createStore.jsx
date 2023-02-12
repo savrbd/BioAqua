@@ -3,7 +3,7 @@ import categoryReducer from "./category";
 const { combineReducers, configureStore } = require("@reduxjs/toolkit");
 
 const rootReducer = combineReducers({
-    category: categoryReducer,
+    category: categoryReducer
 });
 
 export function createStore() {

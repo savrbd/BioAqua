@@ -27,8 +27,7 @@ const categorySlice = createSlice({
 });
 
 const { reducer: categoryReducer, actions } = categorySlice;
-const { categoryRequested, categoryReceved, categoryRequestFiled } =
-    actions;
+const { categoryRequested, categoryReceved, categoryRequestFiled } = actions;
 
 export const loadCategoryList = () => async (dispatch, getState) => {
     const { lastFetch } = getState().category;
