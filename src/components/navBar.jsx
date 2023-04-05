@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
-import { getUserId } from "../services/localStorage.service";
+// import { getUserId } from "../services/localStorage.service";
 import NavProfile from "./navProfile";
 // import label from "../images/label.jpg"
 
 const NavBar = () => {
-    const userId = getUserId();
+    // const userId = getUserId();
     const { currentUser } = useAuth();
     return (
         <>
@@ -22,16 +22,15 @@ const NavBar = () => {
                     />
                 </Link>
                 <div className="position-absolute end-0 me-3 mt-1">
-                    {currentUser ? (
-                        <NavProfile />
-                    ) : (
-                        <Link
+                    {currentUser
+                        ? <NavProfile />
+                        : <Link
                             className="nav-link text-light display-6"
                             to="/login"
                         >
                             Вход
                         </Link>
-                    )}
+                    }
                 </div>
             </div>
             <nav
@@ -74,8 +73,22 @@ const NavBar = () => {
                                 Бренд
                             </Link>
                             {/* <a className="nav-link text-light" href="Footermain">Контакты</a> */}
+                            <Link
+                                className="nav-link text-light"
+                                aria-current="page"
+                                to="/initialize"
+                            >
+                                Инициализация
+                            </Link>
+                            <Link
+                                className="nav-link text-light"
+                                aria-current="page"
+                                to="/admin"
+                            >
+                                Админ.
+                            </Link>
 
-                            {userId === "sqI86df06HTH3LY18OXT6kB1VCW2" ? (
+                            {/* {userId === "sqI86df06HTH3LY18OXT6kB1VCW2" ? (
                                 <Link
                                     className="nav-link text-light"
                                     aria-current="page"
@@ -92,7 +105,7 @@ const NavBar = () => {
                                 >
                                     Админ.
                                 </Link>
-                            ) : null}
+                            ) : null} */}
                         </div>
                     </ul>
                 </div>
